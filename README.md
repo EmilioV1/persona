@@ -23,8 +23,8 @@ Compatible with most modern browsers and mobile devices.
 ## Authors 
 * [Emilio Valladares](https://github.com/Nolimits1)
 * [Candice Chin](https://github.com/cchin1)
-* [Grant Bowen](https://github.com/ga-cabrera)
-* [Gerar Suaverdez](https://github.com/neha039)
+* [Gerson Cabrera](https://github.com/ga-cabrera)
+* [Neha Nehru](https://github.com/neha039)
 
 ## Acknowledgements 
 Thank you to UW Coding Boot Camp for the tools necessary to create this website.
