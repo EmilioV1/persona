@@ -27,5 +27,4 @@ Compatible with most modern browsers and mobile devices.
 * [Neha Nehru](https://github.com/neha039)
 
 ## Acknowledgements 
-Thank you to UW Coding Boot Camp for the tools necessary to create this website.
-The star ratings, restaurant pictures, restaurant information, and the Yelp logo are all properties of Yelp. 
+Thank you to UW Coding Boot Camp for the tools necessary to create this website. 
