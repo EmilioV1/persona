@@ -2,7 +2,7 @@
 
 ## About
 (WIP) 
-* [Deployed](WIP)
+* [Deployed](https://nolimits1.github.io/Persona/)
 * [Repo](https://github.com/Nolimits1/Persona)
 ## Screenshots
 
