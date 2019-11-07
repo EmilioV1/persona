@@ -12,5 +12,5 @@ CREATE TABLE persona(
   PRIMARY KEY (id)
 );
 
-SELECT * FROM persona;
+SELECT * FROM personadb;
 
