@@ -1,7 +1,7 @@
 DROP DATABASE IF EXISTS personadb;
 CREATE DATABASE personadb;
 
-USE personaDB;
+USE personadb;
 
 CREATE TABLE persona(
   id INT NOT NULL AUTO_INCREMENT,

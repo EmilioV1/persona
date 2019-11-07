@@ -1,4 +1,4 @@
-USE personaDB;
+USE personadb;
 
 INSERT INTO persona(characterName, powerstats, biography, appearance)
 VALUES ("Batman","Intelligence:81, Strength:40, Speed:29","Alter-ego: No alter ego found, Place of Birth:Gotham City - 25th Century, Publisher: DC Comics", "Gender:Male, Race:Human");
