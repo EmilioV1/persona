@@ -2,11 +2,11 @@ require("dotenv").config();
 
 const configObj = {
     "development": {
-        "username": process.env.DB_USER_LOCAL,
-        "password": process.env.DB_PASSWORD_LOCAL,
-        "database": process.env.DB_DATABASE_LOCAL,
-        "host": process.env.DB_HOST_LOCAL,
-        "dialect": "mysql"
+        username: process.env.DB_LOCAL_USER,
+        password: process.env.DB_LOCAL_PASSWORD,
+        database: process.env.DB_LOCAL_DATABASE,
+        host: process.env.DB_LOCAL_HOSTNAME,
+       "dialect": "mysql"
     },
     "test": {
         "username": process.env.DB_USER_TEST,
