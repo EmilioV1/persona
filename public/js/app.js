@@ -5,9 +5,9 @@ $(document).ready(function() {
         // Querying the superheroapi.com api for the selected hero
         var queryURL = "https://www.superheroapi.com/api.php/3006715879341905/search/" + name;
         $.ajax({
-          url: queryURL,
-          method: "GET",
-          dataType: "json"
+        url: queryURL,
+        method: "GET",
+        dataType: "json"
         }).then(function(response) {
             $("#hero-div").empty();
             for(var i=0; i<response.results.length; i++) {
@@ -19,9 +19,10 @@ $(document).ready(function() {
                 var firstAppearance = $("<h2>").text("First Appearance: " + response.results[i].biography["first-appearance"]);
                 var publisher = $("<h2>").text("Publisher: " + response.results[i].biography.publisher);
                 var alignment = $("<p>").text("Alignment: " + response.results[i].biography.alignment);
+                var race = $("<p>").text("Race: " + response.results[i].appearance.race);
                 var gender = $("<p>").text("Gender: " + response.results[i].appearance.gender);
-                var height = $("<p>").text("Height: " + response.results[i].appearance.height);
-                var weight = $("<p>").text("Weight: " + response.results[i].appearance.weight);
+                var height = $("<p>").text("Height: " + response.results[i].appearance.height[0]);
+                var weight = $("<p>").text("Weight: " + response.results[i].appearance.weight[0]);
                 var intelligence = $("<p>").text("Intelligence: " + response.results[i].powerstats.intelligence);
                 var strength = $("<p>").text("Strength: " + response.results[i].powerstats.strength);
                 var speed = $("<p>").text("Speed: " + response.results[i].powerstats.speed);
@@ -32,28 +33,26 @@ $(document).ready(function() {
     
                 // Empty the contents of the hero-div, append the new hero content
          
-                heroCard.append(heroImage,heroName,fullName,firstAppearance,publisher,alignment,gender,height,weight,intelligence,strength,speed,durability,power,combat,saveButton);
+                heroCard.append(heroImage,heroName,fullName,firstAppearance,publisher,alignment,race,gender,height,weight,intelligence,strength,speed,durability,power,combat,saveButton);
                 $("#hero-div").append(heroCard);
-         
-            }
+            };
     
           // Printing the entire object to console
           console.log(response);
     
           
         });
-      }
+    };
     
-      // Event handler for user clicking the hero-search button
-      $("#hero-search").on("click", function(event) {
+    // Event handler for user clicking the hero-search button
+    $("#hero-search").on("click", function(event) {
         // Preventing the button from trying to submit the form
         event.preventDefault();
         // Storing the hero name
         var inputHero = $("#hero-input").val().trim();
-    
-        // Running searchPersona function(passing in the hero as an argument)
-        searchPersona(inputHero);
-        
-      });
 
-})
+        // Running searchPersona function(passing in the hero as an argument)
+        searchPersona(inputHero);  
+    });
+
+});
