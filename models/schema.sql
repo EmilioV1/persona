@@ -4,12 +4,15 @@ CREATE DATABASE personadb;
 USE personadb;
 
 CREATE TABLE persona(
-  id INT NOT NULL AUTO_INCREMENT,
-  characterName VARCHAR(45) NULL,
-  powerstats VARCHAR(60) NULL,
-  biography VARCHAR(45) NULL,
-  appearance VARCHAR(45) NULL,
-  PRIMARY KEY (id)
+  name VARCHAR(45) NULL,
+  intelligence INTEGER(60) NULL,
+  speed INTEGER(45) NULL,
+  power INTEGER(45) NULL,
+  placeofbirth VARCHAR(45) NULL,
+  publisher VARCHAR(45) NULL,
+  gender VARCHAR(45) NULL,
+  race VARCHAR(45) NULL,
+  image BLOB(45) NULL,
 );
 
 SELECT * FROM personadb;
