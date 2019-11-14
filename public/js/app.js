@@ -1,11 +1,8 @@
 $(document).ready(function() {
 
+    var saveArray = [];
     function searchPersona(name) {
-        var saveArray = [];
         var id = 0;
-        var thisCharacter = {
-
-        };
         // Querying the superheroapi.com api for the selected hero
         var queryURL = "https://www.superheroapi.com/api.php/3006715879341905/search/" + name;
         $.ajax({
@@ -16,8 +13,9 @@ $(document).ready(function() {
             $("#hero-div").empty();
             for(var i=0; i<response.results.length; i++) {
                 // Constructing HTML containing the hero information
+                var thisCharacter = {};
                 id += 1;
-                thisCharacter.id = id;
+                thisCharacter.id = i;
                 var res = response.results[i];
                 var heroCard = $("<div>").addClass("heroCard");
                 var heroImage = $("<img>").attr("src", res.image.url);
@@ -54,7 +52,7 @@ $(document).ready(function() {
                 thisCharacter.power = res.powerstats.power;
                 var combat = $("<p>").text("Combat: " +  res.powerstats.combat);
                 thisCharacter.combat = res.powerstats.combat;
-                var saveButton = $("<button>").text("Save").addClass("saveButton");
+                var saveButton = $("<button>").text("Save").addClass("saveButton").attr("data-id", thisCharacter.id);
                 // Empty the contents of the hero-div, append the new hero content
                 heroCard.append(heroImage,heroName,fullName,firstAppearance,publisher,alignment,race,birth,gender,height,weight,intelligence,strength,speed,durability,power,combat,saveButton);
                 $("#hero-div").append(heroCard);
@@ -66,17 +64,35 @@ $(document).ready(function() {
             //     //do stuff to save thisCharacter to Sequelize
             //     app.post("/api/superheros", {
             //         id: thisCharacter[0],
-            //         name: thisCharacter[1]
-            //     })
+            //         name: thisCharacter[3],
+            //         fullname: thisCharacter[4]
+            //     });
             // }
-          // Printing the entire object to console
-        //   console.log(response);
-        //   console.log(thisCharacter);
-        //   console.log(saveArray);
+            // Printing the entire object to console
+            //   console.log(response);
+            //   console.log(thisCharacter);
+            //   console.log(saveArray);
     
           
         });
-    };
+    }; //searchPersona() --- END ---
+//     function save() {
+//         var queryURL = 
+//     }
+$(document).on("click", ".saveButton", function() {
+    var myID = $(this).data("id");
+   console.log(myID);
+   console.log(saveArray[myID]);
+   var queryURL = "/api/superheros";
+   $.ajax({
+    url: queryURL,
+    method: "POST",
+    data: saveArray[myID]
+}).then(function(response) {
+    console.log(response);
+})
+})
+
     
     // Event handler for user clicking the hero-search button
     $("#hero-search").on("click", function(event) {
