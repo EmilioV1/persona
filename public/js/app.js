@@ -10,7 +10,6 @@ $(document).ready(function() {
             method: "GET",
             dataType: "json"
         }).then(function(response) {
-            $("#hero-div").empty();
             for(var i=0; i<response.results.length; i++) {
                 // Constructing HTML containing the hero information
                 var thisCharacter = {};
@@ -52,7 +51,7 @@ $(document).ready(function() {
                 thisCharacter.power = res.powerstats.power;
                 var combat = $("<p>").text("Combat: " +  res.powerstats.combat);
                 thisCharacter.combat = res.powerstats.combat;
-                var saveButton = $("<button>").text("Save").addClass("saveButton").attr("data-id", thisCharacter.id);
+                var saveButton = $("<button>").text("Save").addClass("saveButton").attr("data-id", thisCharacter.id).attr("type", "button");
                 // Empty the contents of the hero-div, append the new hero content
                 heroCard.append(heroImage,heroName,fullName,firstAppearance,publisher,alignment,race,birth,gender,height,weight,intelligence,strength,speed,durability,power,combat,saveButton);
                 $("#hero-div").append(heroCard);
@@ -63,6 +62,7 @@ $(document).ready(function() {
     }; //searchPersona() --- END ---
 
 $(document).on("click", ".saveButton", function() {
+    event.preventDefault();
     var myID = $(this).data("id");
    console.log(myID);
    console.log(saveArray[myID]);
@@ -89,3 +89,4 @@ $(document).on("click", ".saveButton", function() {
     });
 
 });
+
