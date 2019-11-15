@@ -6,7 +6,7 @@ module.exports = function(sequelize, DataTypes) {
     publisher: DataTypes.STRING,
     alignment: DataTypes.STRING,
     race: DataTypes.STRING,
-    placeofbirth: DataTypeys.STRING,
+    placeofbirth: DataTypes.STRING,
     gender: DataTypes.STRING,
     height: DataTypes.STRING,
     weight: DataTypes.STRING,
