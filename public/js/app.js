@@ -58,27 +58,10 @@ $(document).ready(function() {
                 $("#hero-div").append(heroCard);
                 saveArray.push(thisCharacter);
                 console.log(thisCharacter);
-                // saveFunction();
             };
-            // function saveFunction(){
-            //     //do stuff to save thisCharacter to Sequelize
-            //     app.post("/api/superheros", {
-            //         id: thisCharacter[0],
-            //         name: thisCharacter[3],
-            //         fullname: thisCharacter[4]
-            //     });
-            // }
-            // Printing the entire object to console
-            //   console.log(response);
-            //   console.log(thisCharacter);
-            //   console.log(saveArray);
-    
-          
         });
     }; //searchPersona() --- END ---
-//     function save() {
-//         var queryURL = 
-//     }
+
 $(document).on("click", ".saveButton", function() {
     var myID = $(this).data("id");
    console.log(myID);
