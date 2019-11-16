@@ -47,7 +47,6 @@ $(document).ready(function() {
                 thisCharacter.durability = res.powerstats.durability;               
                 thisCharacter.power = res.powerstats.power;
                 thisCharacter.combat = res.powerstats.combat;
-<<<<<<< HEAD
                 thisCharacter.name = res.name;
                 thisCharacter.image = res.image.url;
                 
@@ -102,18 +101,11 @@ $(document).ready(function() {
                  
 
                 $("#hero-div").append(heroRow);
-=======
-                var saveButton = $("<button>").text("Save").addClass("saveButton").attr("data-id", thisCharacter.id).attr("type", "button");
-                // Empty the contents of the hero-div, append the new hero content
-                heroCard.append(heroImage,heroName,fullName,firstAppearance,publisher,alignment,race,birth,gender,height,weight,intelligence,strength,speed,durability,power,combat,saveButton);
-                $("#hero-div").append(heroCard);
->>>>>>> 6e09be817ace56f09ffc241adf36f1852176ca27
                 saveArray.push(thisCharacter);
             };
         });
     };
 
-<<<<<<< HEAD
     $(document).on("click", ".saveButton", function() {
         var myID = $(this).data("id");
         console.log(myID);
@@ -127,22 +119,6 @@ $(document).ready(function() {
             console.log(response);
         })
     })
-=======
-$(document).on("click", ".saveButton", function() {
-    event.preventDefault();
-    var myID = $(this).data("id");
-   console.log(myID);
-   console.log(saveArray[myID]);
-   var queryURL = "/api/superheros";
-   $.ajax({
-    url: queryURL,
-    method: "POST",
-    data: saveArray[myID]
-}).then(function(response) {
-    console.log(response);
-})
-})
->>>>>>> 6e09be817ace56f09ffc241adf36f1852176ca27
 
     
     // Event handler for user clicking the hero-search button
