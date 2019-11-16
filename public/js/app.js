@@ -2,6 +2,7 @@ $(document).ready(function() {
 
     var saveArray = [];
     function searchPersona(name) {
+        $("#hero-div").empty();
         var id = 0;
         // Querying the superheroapi.com api for the selected hero
         var queryURL = "https://www.superheroapi.com/api.php/3006715879341905/search/" + name;
@@ -35,7 +36,7 @@ $(document).ready(function() {
                 thisCharacter.fullname = res.biography["full-name"];          
                 thisCharacter.firstappearance = res.biography["first-appearance"];
                 thisCharacter.publisher = res.biography.publisher;
-                thisCharacter.alignmnet = res.biography.alignment;               
+                thisCharacter.alignment = res.biography.alignment;               
                 thisCharacter.race = res.appearance.race;               
                 thisCharacter.placeofbirth = res.biography["place-of-birth"];               
                 thisCharacter.gender = res.appearance.gender;
