@@ -1,3 +1,33 @@
 .list-group-item {
   line-height: 2.5;
 }
+
+main {
+  margin-left: 12em;
+  margin-right: 12em;
+}
+
+#hero-div {
+  display: flex !important;
+  flex-wrap: wrap;
+  justify-items: center;
+  justify-content: space-around;
+  padding: 0;
+
+}
+
+#hero-div>div {
+  flex-basis: 50%;
+  margin:
+  0;
+}
+
+#hero-div>div img {
+  width: 90%;
+  margin: auto;
+}
+
+.card-title {
+  margin: auto;
+  padding-left: 50px;
+}
