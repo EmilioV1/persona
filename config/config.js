@@ -6,7 +6,7 @@ const configObj = {
         password: process.env.DB_LOCAL_PASSWORD,
         database: process.env.DB_LOCAL_DATABASE,
         host: process.env.DB_LOCAL_HOSTNAME,
-       "dialect": "mysql"
+        "dialect": "mysql"
     },
     "test": {
         "username": process.env.DB_USER_TEST,

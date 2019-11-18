@@ -1,8 +1,8 @@
-module.exports = function(sequelize, DataTypes) {
+module.exports = function (sequelize, DataTypes) {
   var Persona = sequelize.define("Persona", {
     name: DataTypes.STRING,
     fullname: DataTypes.STRING,
-    firstappearance: DataTypes.STRING,
+    appearance: DataTypes.STRING,
     publisher: DataTypes.STRING,
     alignment: DataTypes.STRING,
     race: DataTypes.STRING,
@@ -15,7 +15,8 @@ module.exports = function(sequelize, DataTypes) {
     speed: DataTypes.INTEGER,
     durability: DataTypes.INTEGER,
     power: DataTypes.INTEGER,
-    combat: DataTypes.INTEGER
+    combat: DataTypes.INTEGER,
+    image: DataTypes.STRING
   });
   return Persona;
 };

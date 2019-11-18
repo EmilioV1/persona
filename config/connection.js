@@ -1,4 +1,4 @@
-//var dotenv = require('dotenv').config();
+// var dotenv = require('dotenv').config();
 
 //Inside the connection.js file, setup the code to connect Node to MySQL.
 var mysql = require("mysql");
@@ -14,10 +14,10 @@ if (process.env.JAWSDB_URL) {
         password: "password",
         database: "personadb"
     });
-};  
+};
 
 //Making connection
-connection.connect(function(err) {
+connection.connect(function (err) {
     if (err) {
         console.error("error connecting: " + err.stack);
         return;

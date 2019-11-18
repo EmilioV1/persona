@@ -38,17 +38,17 @@ function objToSql(ob) {
 
 var orm = {
     // Display all superheroes in the db.
-    selectAll: function(table, cb) {
+    selectAll: function (table, cb) {
         var queryString = `SELECT * FROM ${table};`
 
-        connection.query(queryString, function(err, result) {
-            if (err) 
+        connection.query(queryString, function (err, result) {
+            if (err)
                 throw err;
             cb(result);
         });
     },
     // Add a superhero to the db.
-    insertOne: function(table, cols, vals, cb) {
+    insertOne: function (table, cols, vals, cb) {
         var queryString = "INSERT INTO ${table};"
 
         queryString += " (";
@@ -60,7 +60,7 @@ var orm = {
 
         console.log(queryString);
 
-        connection.query(queryString, vals, function(err, result) {
+        connection.query(queryString, vals, function (err, result) {
             if (err)
                 throw err;
             cb(result);
