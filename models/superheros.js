@@ -2,7 +2,7 @@ module.exports = function (sequelize, DataTypes) {
   var Persona = sequelize.define("Persona", {
     name: DataTypes.STRING,
     fullname: DataTypes.STRING,
-    appearance: DataTypes.STRING,
+    firstappearance: DataTypes.STRING,
     publisher: DataTypes.STRING,
     alignment: DataTypes.STRING,
     race: DataTypes.STRING,
