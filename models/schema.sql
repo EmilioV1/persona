@@ -3,5 +3,3 @@ CREATE DATABASE personadb;
 
 USE personadb;
 
-SELECT * FROM personadb;
-
