@@ -66,6 +66,7 @@ main {
 
 .heroCard {
   display: flex;
+  max-width: 600px;
   justify-content: space-around;
   border-radius: 5px;
 }
