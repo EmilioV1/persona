@@ -1,8 +1,9 @@
 # Persona
 
 ## About
-(WIP) 
-* [Deployed](https://nolimits1.github.io/Persona/)
+Looking to escape reality for a bit? Look no further, with persona you are able to search super heros and pull up many data points for that hero. If you would like to save that hero for later to compare to another then just click save. Enjoy the escape and happy searching!
+
+* [Deployed](https://super-persona.herokuapp.com/)
 * [Repo](https://github.com/Nolimits1/Persona)
 ## Screenshots
 
@@ -13,12 +14,10 @@
 * jQuery
 * Node
 * Express
+* Sequelize
 * SQL 
 * [Materialize CSS](https://materializecss.com/)
-* Hosted by GitHub
-
-## Compatibility 
-Compatible with most modern browsers and mobile devices.
+* Hosted by Heroku
 
 ## Authors 
 * [Emilio Valladares](https://github.com/Nolimits1)
